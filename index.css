@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    /*  */
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+}
+
+
+#nav{
+    /*  */
+    /* background-color: bisque; */
+    height: 4vw;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 3vw;
+}
+#nav-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gola{
+    height: 1.2vw;
+    width: 1.2vw;
+    background-color: rgb(43, 38, 38);
+    border-radius: 50%;
+    
+    margin: 0 0.01vw;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+#nav-part2 h4{
+    font-size: 0.9vw;
+    font-weight: 600;
+}
+#nav-part2 h4 span{
+    color: rgb(118, 112, 112);
+    margin-left: 0.7vw;
+}
+#nav-part2 h5{
+    display: none;
+}
+
+
+#nav2{
+    /*  */
+    /* background-color: rgb(158, 210, 86); */
+    height: 3vw;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+
+    padding: 0 3vw;
+    gap: 4.5vw;
+}
+#nav2 h3{
+    font-size: 0.9vw;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+#content{
+    /*  */
+    /* background-color: aquamarine; */
+    /* 100% - height(nav1) - height(nav2) */
+    height: calc(100% - 7vw);
+    width: 100%;
+}
+#text-content{
+    /*  */
+    /* background-color: burlywood; */
+    height: 40%;
+    width: 100%;
+
+    display: flex;
+
+    /* ScreollBar come this box */
+    overflow-x: auto;
+
+}
+#text-content::-webkit-scrollbar{
+    background-color: transparent;
+    height: 0.5vw;
+}
+#text-content::-webkit-scrollbar-thumb{
+    background-color: rgb(244, 172, 172);
+}
+.elem{
+    /*  */
+    /* background-color: fuchsia; */
+    width: 60%;
+    height: 100%;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elem h1{
+    font-size: 7vw;
+    font-weight: 50;
+}
+#image-content{
+    height: 60%;
+    width: 100%;
+
+    display: flex;
+    overflow-x: auto;
+}
+#image-content::-webkit-scrollbar{
+    display: none;
+}
+#image-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:600px) {
+    #nav{
+        /*  */
+        /* background-color: bisque; */
+        height: 10vw;
+        padding: 0 4vw;
+    }
+    .gola{
+        height: 5vw;
+        width: 5vw;
+        margin: 0 0.1vw;
+    }
+    #nav-part2{
+        gap: 2vw;
+        align-items: center;
+    }
+    #nav-part2 h4{
+        display: none;
+        font-size: 4vw;
+        margin-right: 5vw;
+    }
+    #nav-part2 h4:nth-child(1){
+        display: initial;
+    }
+    #nav-part2 h5{
+        display: initial;
+    }
+    #nav-part2 h5 i{
+        font-size: 5vw;
+        font-weight: 800;
+    }
+    
+    
+    #nav2{
+        /*  */
+        /* background-color: rgb(158, 210, 86); */
+        height: 12vw;
+        width: 100%;
+        padding: 0 4vw;
+        gap: 3vw;
+
+        justify-content: space-between;
+    }
+    #nav2 h3{
+        font-size: 2.5vw;
+        color: #444;
+        font-weight: 600;
+    }
+    
+
+    #content{
+        /*  */
+        /* background-color: aquamarine; */
+        height: calc(100% - 22vw);
+    }
+    #text-content{
+        /*  */
+        /* background-color: burlywood; */
+        height: 30%;
+        /* ScreollBar come this box */
+        overflow-x: auto;
+    }
+    #text-content::-webkit-scrollbar{
+        background-color: transparent;
+        height: 1.2vw;
+    }
+    #text-content::-webkit-scrollbar-thumb{
+        background-color: red;
+    }
+    .elem{
+        /*  */
+        /* background-color: fuchsia; */
+        width: 60%;
+    }
+    .elem h1{
+        font-size: 12vw;
+        font-weight: 500;
+    }
+    #image-content{
+        height: 70%;
+        width: 100%;
+    
+        display: flex;
+        overflow-x: auto;
+    }
+    #image-content::-webkit-scrollbar{
+        display: none;
+    }
+    #image-content img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        flex-shrink: 0;
+    }
+}
